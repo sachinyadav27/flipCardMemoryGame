@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="mode-selection" id="mode-selection">
+            <h1>Select Game Mode</h1>
+            <button onclick="startGame('easy')">Easy (4x4)</button>
+            <button onclick="startGame('medium')">Medium (6x6)</button>
+            <button onclick="startGame('hard')">Hard (8x8)</button>
+        </div>
+
+        <div class="game-play hidden" id="game-play">
+            <div class="score-board">
+                <p>Player 1 Score: <span id="player1-score">0</span></p>
+                <p>Player 2 Score: <span id="player2-score">0</span></p>
+                <p>Turn: <span id="current-turn">Player 1</span></p>
+            </div>
+            <div id="game-board" class="game-board"></div>
+            <button onclick="restartGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
